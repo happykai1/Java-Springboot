@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Create new user</title>
+<link rel="stylesheet" media="screen" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" media="screen" href="/css/custom.css" th:href="@{/css/custom.css}">
+    <script src="/javascripts/jquery-1.12.2.min.js" th:src="@{/javascripts/jquery-1.12.2.min.js}" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/bootstrap.min.js" th:src="@{/javascripts/bootstrap.min.js}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	
+
+		<div class="container">
+			<div class="row">
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<form th:action="@{/user/add}" th:object="${userAddForm}" method="post">
+							<div class="form-group">
+								<h2>Create account</h2>
+							</div>
+							<div class="form-group">
+					<div class="form-group mt20 mb10" th:classappend="${#fields.hasErrors('name')}?'has-error'">		
+								<label class="control-label" for="signupName">Your name</label>
+								<input type="text" class="form-control" th:field="*{name}" />
+							</div>
+							</div>
+	<span th:if="*{#fields.hasErrors('name')}" th:errors="*{name}" class="help-block">error!</span>
+<br>
+							
+							<div class="form-group">
+		<div class="form-group mt20 mb10" th:classappend="${#fields.hasErrors('email')}?'has-error'">
+								<label class="control-label" for="signupEmail">Email</label> 
+								<input type="text" class="form-control" th:field="*{email}" /></div>
+							</div>
+							
+					<span th:if="*{#fields.hasErrors('email')}" th:errors="*{email}" class="help-block">error!</span>
+
+<br>		
+							
+							
+							
+							<div class="form-group">
+				<div class="form-group mt20 mb10" th:classappend="${#fields.hasErrors('password')}? 'has-error'">			
+								<label class="control-label" for="signupPassword">Password</label>
+						<input type="password" class="form-control" th:field="*{password}" />
+							</div>
+							</div>
+							<span th:if="*{#fields.hasErrors('password')}" th:errors="*{password}" class="help-block">error!</span>
+
+<br>
+
+
+							<div class="form-group">
+								<button id="signupSubmit" type="submit" name="submit"
+									class="btn btn-info btn-block">Create your account</button>
+							</div>
+							
+							<hr>
+							<p></p>
+							Already have an account? <a th:href="@{/}">Sign in</a>
+						
+						</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		
+
+</body>
+</html>

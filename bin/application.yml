@@ -1,0 +1,43 @@
+spring.profiles.active: nat
+---
+spring:
+  profiles: local
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8
+    username: root 
+    password: manager
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+    encoding: UTF-8
+---
+spring:
+  profiles: nat
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.33.10:3306/springboot?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: manager
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+    encoding: UTF-8   
+    
+server:
+    port: 8090   
+     
+security:
+  user:
+    name: nat
+    password: 12345
+    
+    

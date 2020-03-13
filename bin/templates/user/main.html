@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/user">
+<head>
+<script src="/javascripts/jquery-1.12.2.min.js" th:src="@{/javascripts/jquery-1.12.2.min.js}" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/bootstrap.min.js" th:src="@{/javascripts/bootstrap.min.js}" type="text/javascript" charset="utf-8"></script>
+ <link rel="stylesheet" media="screen" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" media="screen" href="/css/css.css" th:href="@{/css/css.css}">
+</head>
+<body style="background-color: #ffe6e6">
+
+	<div th:replace="user/header :: header">Header Menu</div>
+
+	<div class="container">
+
+		<div layout:fragment="content">
+
+			
+			
+			<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-md-8" id="left-box">
+            <figure class="figure">
+            <img th:src="@{/images/b.jpg}"  class="img-thumbnail" alt="...">
+            <figcaption>BNK48 member</figcaption>
+            </figure>
+        </div>
+        <div class="col-sm-4 col-md-4" id="right_box">
+            <figure class="figure">
+              <img th:src="@{/images/n.jpg}"  class="img-thumbnail" alt="...">
+              <figcaption>Jan</figcaption>
+            </figure>
+            
+            <figure class="figure">
+              <img th:src="@{/images/k.jpg}"  class="img-thumbnail" alt="...">
+              <figcaption>Jan</figcaption>
+            </figure>
+          
+            <figure class="figure">
+              <img th:src="@{/images/cats.jpg}"  class="img-thumbnail" alt="...">
+              <figcaption>Jan</figcaption>
+            </figure>
+        </div>
+    </div>
+    
+    
+    <div class="row" style="margin: 0 auto; text-align: center;">
+    
+    <div class="col-6" style="float: left;">
+  
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbnk48official%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  </div>
+    
+  <div class="col-6">
+   <iframe width="800" height="500" src="https://www.youtube.com/embed/mfqJyKm20Z4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    
+  
+  </div>
+  
+</div>
+  
+  <p></p>
+  
+  <div style="text-align: center; color:#ffffff; background-color: #ffcccc;">
+  
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget purus scelerisque nisi consectetur feugiat eget vel magna. Pellentesque eget mauris vitae dolor porta mattis. Vestibulum varius tincidunt tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod tellus vel dolor mattis vehicula. Donec eget leo massa. Vivamus id felis quam, sodales feugiat sapien. Etiam in justo at metus dignissim laoreet non ac arcu. Nunc semper condimentum metus ut luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean orci tellus, elementum non porta quis, egestas id quam. Integer a mi in felis pulvinar aliquam interdum nec augue. Proin magna enim, bibendum ut molestie ut, adipiscing sit amet odio.</p>
+
+					<p>Vivamus nec venenatis lacus. Donec lectus nisi, pellentesque sed facilisis eget, commodo sit amet risus. Nam purus nisi, sollicitudin eleifend lacinia aliquet, sollicitudin eget turpis. Nam pellentesque diam non turpis elementum at aliquet justo iaculis. Aliquam erat volutpat. Vestibulum accumsan vulputate pharetra. Fusce in diam nec neque varius aliquet et at sem.
+  
+  </div>
+</div>
+			
+			
+			
+			
+			
+		</div>
+<div th:replace="user/footer :: footer">footer</div>
+	</div>
+
+
+</body>
+
+
+</html>

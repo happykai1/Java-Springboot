@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/user">
+<head>
+<title>Sign in</title>
+
+<link rel="stylesheet" media="screen" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" media="screen" href="/css/main.css" th:href="@{/css/main.css}">
+    <script src="/javascripts/jquery-1.12.2.min.js" th:src="@{/javascripts/jquery-1.12.2.min.js}" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/bootstrap.min.js" th:src="@{/javascripts/bootstrap.min.js}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	
+
+		<div id="login">
+				
+				<div th:if="${loginFail}"
+					class="alert alert-danger alert-dismissible" role="alert">
+
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+
+					<span aria-hidden="true" th:text="${errorMsg}">&times;</span>
+				</div>
+				
+				<div th:if="${loginSuccess}" class="alert alert-success alert-dismissible" role="alert">
+
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-md-4 col-md-offset-4">
+							<h1 class="text-center login-title">Sign in to continue to Website</h1>
+							<div class="account-wall">
+								<img class="profile-img"
+									src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+									alt="">
+
+
+							<form th:action="@{/user/login}" method="post" role="form" name="form1">
+							
+							<p id="username-field">
+							<label>Email</label>
+									<input type="text" class=" form-control" name="email" id="email" />
+									</p>
+									
+								<p id="password-field"> <label>Password</label>	
+									<input type="password" class="form-control" name="password" id="password" />
+<div style="color: #a94442" class="help-block" th:if="${param.error}" >
+<span>Invalid username and password.</span>
+</div>
+</p>
+
+									<p id="signin-field">
+	<button class="btn btn-lg btn-primary btn-block" type="submit" id="signin" value="Sign in">	Sign in</button>
+									</p>
+									
+								</form>
+							</div>
+							<a href="/user/regis" class="text-center new-account">Create an account</a>
+						</div>
+					</div>
+				
+
+</div>
+
+			</div>
+			
+</body>
+</html>
